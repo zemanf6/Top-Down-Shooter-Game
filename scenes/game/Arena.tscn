@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://wqbvxdhs7hkh"]
+
+[ext_resource type="Script" uid="uid://1atprnagke6q6" path="res://scripts/game/arena_visuals.gd" id="1_arena_visuals"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_np8jt"]
+size = Vector2(1280, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fukgj"]
+size = Vector2(1280, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tol4y"]
+size = Vector2(40, 720)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jibgs"]
+size = Vector2(40, 720)
+
+[node name="Arena" type="Node2D" unique_id=472873430]
+script = ExtResource("1_arena_visuals")
+
+[node name="Background" type="ColorRect" parent="." unique_id=606245940]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.3696652, 0.6338061, 0.39514554, 1)
+
+[node name="TopWall" type="StaticBody2D" parent="." unique_id=1592601454]
+position = Vector2(640, -20)
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TopWall" unique_id=925100321]
+shape = SubResource("RectangleShape2D_np8jt")
+
+[node name="BottomWall" type="StaticBody2D" parent="." unique_id=2126440656]
+position = Vector2(640, 740)
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BottomWall" unique_id=483743731]
+shape = SubResource("RectangleShape2D_fukgj")
+
+[node name="LeftWall" type="StaticBody2D" parent="." unique_id=141364695]
+position = Vector2(-20, 360)
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall" unique_id=205825721]
+shape = SubResource("RectangleShape2D_tol4y")
+
+[node name="RightWall" type="StaticBody2D" parent="." unique_id=1624017457]
+position = Vector2(1300, 360)
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall" unique_id=959077844]
+shape = SubResource("RectangleShape2D_jibgs")

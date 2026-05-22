@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://uy6y4qeiu7p3"]
+
+[ext_resource type="Script" uid="uid://kyjebij7r7wi" path="res://scripts/spawners/enemy_spawner.gd" id="1_xk534"]
+
+[node name="EnemySpawner" type="Node2D" unique_id=1015134037]
+script = ExtResource("1_xk534")
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=1076561807]
+one_shot = true
+
+[node name="WaveDelayTimer" type="Timer" parent="." unique_id=535009701]
+wait_time = 3.0
+one_shot = true

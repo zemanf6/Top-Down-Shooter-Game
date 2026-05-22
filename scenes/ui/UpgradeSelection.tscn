@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://mt21pof4yp7w"]
+
+[ext_resource type="Script" uid="uid://c36fh7aplfx3t" path="res://scripts/ui/upgrade_selection.gd" id="1_a1t4q"]
+
+[node name="UpgradeSelection" type="CanvasLayer" unique_id=452877045]
+script = ExtResource("1_a1t4q")

@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://exuskp43f1n7"]
+
+[ext_resource type="Script" uid="uid://bsp7b2p11lw7h" path="res://scripts/ui/hud.gd" id="1_emh6u"]
+
+[node name="Hud" type="CanvasLayer" unique_id=2045594973]
+script = ExtResource("1_emh6u")
+
+[node name="HealthLabel" type="Label" parent="." unique_id=2081995060]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 109.0
+offset_bottom = 43.0
+theme_override_font_sizes/font_size = 24
+text = "Životy: 5 / 5"
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=932757161]
+offset_left = 20.0
+offset_top = 55.0
+offset_right = 82.0
+offset_bottom = 78.0
+theme_override_font_sizes/font_size = 24
+text = "Skóre: 0"
+
+[node name="WaveLabel" type="Label" parent="." unique_id=1607940543]
+offset_left = 20.0
+offset_top = 90.0
+offset_right = 114.0
+offset_bottom = 113.0
+theme_override_font_sizes/font_size = 24
+text = "Text: Vlna: 1"

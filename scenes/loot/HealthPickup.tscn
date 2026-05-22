@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://51m7gvsilfr8"]
+
+[ext_resource type="Script" uid="uid://c6gfdid1jlip8" path="res://scripts/loot/health_pickup.gd" id="1_a483c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_155fd"]
+radius = 14.0
+
+[node name="HealthPickup" type="Area2D" unique_id=418752233]
+collision_layer = 32
+collision_mask = 2
+script = ExtResource("1_a483c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1179279822]
+shape = SubResource("CircleShape2D_155fd")

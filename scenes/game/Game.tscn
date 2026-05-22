@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://bvd6026x5rplu"]
+
+[ext_resource type="PackedScene" uid="uid://dpgfwo4ojbpkg" path="res://scenes/player/Player.tscn" id="1_klkup"]
+[ext_resource type="Script" uid="uid://b6n2qi712ks8d" path="res://scripts/game/game.gd" id="1_m44fu"]
+[ext_resource type="PackedScene" uid="uid://wqbvxdhs7hkh" path="res://scenes/game/Arena.tscn" id="2_gg4pt"]
+[ext_resource type="PackedScene" uid="uid://6xdj451mnfpx" path="res://scenes/enemies/Enemy.tscn" id="3_vrspl"]
+[ext_resource type="PackedScene" uid="uid://bynvitcra27kk" path="res://scenes/game/CoverBlock.tscn" id="3_wnrko"]
+[ext_resource type="PackedScene" uid="uid://exuskp43f1n7" path="res://scenes/ui/Hud.tscn" id="4_7qcb4"]
+[ext_resource type="PackedScene" uid="uid://uy6y4qeiu7p3" path="res://scenes/spawners/EnemySpawner.tscn" id="5_365ku"]
+[ext_resource type="PackedScene" uid="uid://dhwg3g7dqhxi4" path="res://scenes/ui/GameOverScreen.tscn" id="5_lyhax"]
+[ext_resource type="PackedScene" uid="uid://fygtxocu0758" path="res://scenes/ui/PauseMenu.tscn" id="7_qf6a8"]
+[ext_resource type="PackedScene" uid="uid://mt21pof4yp7w" path="res://scenes/ui/UpgradeSelection.tscn" id="8_60iot"]
+[ext_resource type="Script" uid="uid://c4g7df4m55yoc" path="res://scripts/loot/loot_dropper.gd" id="10_56wml"]
+[ext_resource type="PackedScene" uid="uid://51m7gvsilfr8" path="res://scenes/loot/HealthPickup.tscn" id="11_aptqa"]
+[ext_resource type="Script" uid="uid://08ll1qv6tylj" path="res://scripts/game/score_storage.gd" id="12_5xhyk"]
+[ext_resource type="Script" uid="uid://bfpyvij7gysm3" path="res://scripts/upgrades/upgrade_manager.gd" id="12_gynul"]
+
+[node name="Game" type="Node2D" unique_id=1470402282]
+script = ExtResource("1_m44fu")
+
+[node name="Arena" parent="." unique_id=472873430 instance=ExtResource("2_gg4pt")]
+
+[node name="CoverBlock" parent="." unique_id=179520580 instance=ExtResource("3_wnrko")]
+position = Vector2(400, 300)
+size = Vector2(160, 80)
+
+[node name="CoverBlock2" parent="." unique_id=1364897557 instance=ExtResource("3_wnrko")]
+position = Vector2(850, 420)
+size = Vector2(180, 90)
+
+[node name="CoverBlock3" parent="." unique_id=1580559804 instance=ExtResource("3_wnrko")]
+position = Vector2(640, 180)
+size = Vector2(120, 70)
+
+[node name="CoverBlock4" parent="." unique_id=1041349884 instance=ExtResource("3_wnrko")]
+position = Vector2(640, 560)
+size = Vector2(120, 70)
+
+[node name="Player" parent="." unique_id=1885935768 instance=ExtResource("1_klkup")]
+position = Vector2(640, 360)
+
+[node name="Hud" parent="." unique_id=2045594973 instance=ExtResource("4_7qcb4")]
+
+[node name="GameOverScreen" parent="." unique_id=1813890635 instance=ExtResource("5_lyhax")]
+
+[node name="PauseMenu" parent="." unique_id=786090754 instance=ExtResource("7_qf6a8")]
+
+[node name="UpgradeSelection" parent="." unique_id=452877045 instance=ExtResource("8_60iot")]
+
+[node name="LootDropper" type="Node" parent="." unique_id=1480176220]
+script = ExtResource("10_56wml")
+health_pickup_scene = ExtResource("11_aptqa")
+
+[node name="UpgradeManager" type="Node" parent="." unique_id=206764690]
+script = ExtResource("12_gynul")
+
+[node name="ScoreStorage" type="Node" parent="." unique_id=80196206]
+script = ExtResource("12_5xhyk")
+
+[node name="EnemySpawner" parent="." unique_id=1015134037 instance=ExtResource("5_365ku")]
+enemy_scene = ExtResource("3_vrspl")

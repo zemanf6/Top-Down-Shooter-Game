@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dpgfwo4ojbpkg"]
+
+[ext_resource type="Script" uid="uid://bcbqjuvm2h1ql" path="res://scripts/player/player.gd" id="1_wr5hl"]
+[ext_resource type="PackedScene" uid="uid://k8xj1k26atfw" path="res://scenes/projectiles/Projectile.tscn" id="2_gfjak"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o8nba"]
+radius = 16.0
+
+[node name="Player" type="CharacterBody2D" unique_id=1885935768]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_wr5hl")
+projectile_scene = ExtResource("2_gfjak")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1257228559]
+shape = SubResource("CircleShape2D_o8nba")
+
+[node name="Muzzle" type="Marker2D" parent="." unique_id=1586043815]
+position = Vector2(30, 0)
+
+[node name="ShootCooldownTimer" type="Timer" parent="." unique_id=361175399]
+wait_time = 0.18
+one_shot = true

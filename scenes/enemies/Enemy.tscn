@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://6xdj451mnfpx"]
+
+[ext_resource type="Script" uid="uid://mnp56w2e6aa0" path="res://scripts/enemies/enemy.gd" id="1_hpe7p"]
+[ext_resource type="PackedScene" uid="uid://bls2fxd4rmvrk" path="res://scenes/projectiles/EnemyProjectile.tscn" id="2_k7o7a"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jsdvy"]
+radius = 18.0
+
+[node name="Enemy" type="CharacterBody2D" unique_id=1965924580]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_hpe7p")
+enemy_projectile_scene = ExtResource("2_k7o7a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1831446783]
+shape = SubResource("CircleShape2D_jsdvy")
+
+[node name="DamageCooldownTimer" type="Timer" parent="." unique_id=247308752]
+wait_time = 0.7
+one_shot = true
+
+[node name="ShootTimer" type="Timer" parent="." unique_id=71738925]
+wait_time = 1.4

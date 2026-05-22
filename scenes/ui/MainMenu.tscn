@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://8033bnmh1a3c"]
+
+[ext_resource type="Script" uid="uid://bfsl4am7ry3j0" path="res://scripts/ui/main_menu.gd" id="1_vjtqc"]
+
+[node name="MainMenu" type="Control" unique_id=1832061472]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vjtqc")
+
+[node name="Background" type="ColorRect" parent="." unique_id=698658675]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.16670963, 0.3064564, 0.8371406, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=2018389273]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MenuBox" type="VBoxContainer" parent="CenterContainer" unique_id=1097630983]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="TitleLabel" type="Label" parent="CenterContainer/MenuBox" unique_id=478504121]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "TOP-DOWN-SHOOTER"
+horizontal_alignment = 1
+
+[node name="SubtitleLabel" type="Label" parent="CenterContainer/MenuBox" unique_id=1267108165]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Godot engine"
+horizontal_alignment = 1
+
+[node name="StartButton" type="Button" parent="CenterContainer/MenuBox" unique_id=1677145424]
+custom_minimum_size = Vector2(260, 55)
+layout_mode = 2
+text = "Start"
+
+[node name="QuitButton" type="Button" parent="CenterContainer/MenuBox" unique_id=866873981]
+custom_minimum_size = Vector2(260, 55)
+layout_mode = 2
+text = "Konec"

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://k8xj1k26atfw"]
+
+[ext_resource type="Script" uid="uid://b6n73hpum1ehd" path="res://scripts/projectiles/projectile.gd" id="1_cjq15"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_slbcu"]
+radius = 5.0
+
+[node name="Projectile" type="Area2D" unique_id=48163514]
+collision_layer = 8
+collision_mask = 5
+script = ExtResource("1_cjq15")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=969020655]
+shape = SubResource("CircleShape2D_slbcu")
+
+[node name="LifetimeTimer" type="Timer" parent="." unique_id=1887518872]
+wait_time = 1.4
+one_shot = true
